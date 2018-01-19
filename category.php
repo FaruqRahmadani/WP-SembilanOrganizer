@@ -1,17 +1,11 @@
 <?php get_header(); ?>
-	<!--[if lt IE 8]>
-		<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-	<![endif]-->
-
-	<!-- Add your site or application content here -->
 	<div id="btn-resv">
 		<span onclick="openNav()" class="glyphicon glyphicon-align-justify" style="display: none"></span>
 	</div>
 
 
 	<div id="menu-resv" class="overlay">
-	  <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><span>&times;</span></a> -->
-		<div id="cls-resv">
+	  <div id="cls-resv">
 			<span onclick="closeNav()">&times;</span>
 		</div>
 
