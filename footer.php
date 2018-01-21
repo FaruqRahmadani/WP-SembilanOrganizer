@@ -39,8 +39,6 @@
 <script src="<?= get_template_directory_uri().'/js/plugins.js' ?>"></script>
 <script src="<?= get_template_directory_uri().'/js/main.js' ?>"></script>
 
-
-<?php wp_footer(); ?>
 <script>
   (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
   function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
