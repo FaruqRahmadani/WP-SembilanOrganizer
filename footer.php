@@ -19,6 +19,7 @@
 				<li><a href="#"><img src="<?= get_template_directory_uri() ?>/img/medsos/twitter.svg" alt="twitter"></a></li>
 				<li><a href="#"><img src="<?= get_template_directory_uri() ?>/img/medsos/instagram.svg" alt="instagram"></a></li>
 				<li><a href="#"><img src="<?= get_template_directory_uri() ?>/img/medsos/youtube.svg" alt="youtube"></a></li>
+				<li><a href="#"><img src="<?= get_template_directory_uri() ?>/img/medsos/youtube.svg" alt="youtube"></a></li>
 			</ul>
 		</div>
 
