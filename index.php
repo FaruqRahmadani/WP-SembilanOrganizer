@@ -12,13 +12,16 @@
       <ul>
         <li><a href="#home" class="page-scroll" onclick="closeNav()">HOME</a></li>
         <li><a href="#about" class="page-scroll" onclick="closeNav()">ABOUT</a></li>
+
         <?php
           $args = array(
             'theme_location'  => 'main_menu',
             'container'       => false,
             'items_wrap' => '%3$s',
           );
-          wp_nav_menu($args);
+          if ( has_nav_menu( 'main_menu' ) ) :
+            wp_nav_menu($args);
+          endif;
         ?>
         <li><a href="#service" class="page-scroll" onclick="closeNav()">SERVICE</a></li>
         <li><a href="#our-team" class="page-scroll" onclick="closeNav()">OUR TEAM</a></li>
@@ -43,7 +46,9 @@
                   'container'       => false,
                   'items_wrap' => '%3$s',
                 );
-                wp_nav_menu($args);
+                if ( has_nav_menu( 'main_menu' ) ) :
+                  wp_nav_menu($args);
+                endif;
               ?>
             <li><a href="#service" class="page-scroll" onclick="closeNav()">SERVICES</a></li>
             <li><a href="#our-team" class="page-scroll" onclick="closeNav()">OUR TEAMS</a></li>
@@ -258,4 +263,4 @@
     </div>
   </div>
 
-<?php get_footer(); ?>
+<?php get_footer() ?>
