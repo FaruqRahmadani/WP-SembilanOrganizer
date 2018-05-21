@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="14.111113mm"
+   height="14.111113mm"
+   viewBox="0 0 50.000005 50.000005"
+   id="svg4269"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="fb.svg">
+  <defs
+     id="defs4271" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="9.6000003"
+     inkscape:cx="24.999999"
+     inkscape:cy="25.000007"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1280"
+     inkscape:window-height="718"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata4274">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-440.71429,-141.64792)">
+    <g
+       style="fill:#f2f2f2;fill-rule:evenodd;stroke:none;stroke-width:1"
+       id="Page-1"
+       transform="translate(440.71429,141.64792)">
+      <g
+         style="fill:#f2f2f2"
+         id="Facebook">
+        <path
+           style="fill:#f2f2f2"
+           id="Oval-1"
+           d="M 25,50 C 38.807119,50 50,38.807119 50,25 50,11.192881 38.807119,0 25,0 11.192881,0 0,11.192881 0,25 0,38.807119 11.192881,50 25,50 Z m 0,-3 C 37.150265,47 47,37.150265 47,25 47,12.849735 37.150265,3 25,3 12.849735,3 3,12.849735 3,25 3,37.150265 12.849735,47 25,47 Z m 1.81452,-11 0,-11.001288 3.254225,0 0.431255,-3.791105 -3.68548,0 0.0055,-1.897484 c 0,-0.988779 0.100672,-1.518589 1.622505,-1.518589 l 2.034409,0 0,-3.791534 -3.254686,0 c -3.909401,0 -5.285409,1.839094 -5.285409,4.931871 l 0,2.276166 -2.436868,0 0,3.791104 2.436868,0 0,11.000859 4.877652,0 z m 0,0"
+           inkscape:connector-curvature="0" />
+      </g>
+    </g>
+  </g>
+</svg>
