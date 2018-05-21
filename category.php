@@ -3,7 +3,6 @@
   <span onclick="openNav()" class="glyphicon glyphicon-align-justify" style="display: none"></span>
 </div>
 
-
 <div id="menu-resv" class="overlay">
   <div id="cls-resv">
     <span onclick="closeNav()">&times;</span>
@@ -11,16 +10,7 @@
 
   <div class="overlay-content">
     <ul>
-      <?php
-        $args = array(
-          'theme_location'  => 'events_menu',
-          'container'       => false,
-          'items_wrap' => '%3$s',
-        );
-        if ( has_nav_menu( 'events_menu' ) ) :
-          wp_nav_menu($args);
-        endif;
-      ?>
+      <?php portfolio_menu() ?>
     </ul>
   </div>
 </div>
@@ -34,20 +24,7 @@
     <nav class="navbar">
       <div class="container">
         <ul class="nav navbar-nav pull-right">
-          <?php
-            $args = array(
-              'theme_location'  => 'events_menu',
-              'container'       => false,
-              'items_wrap' => '%3$s',
-            );
-            if ( has_nav_menu( 'events_menu' ) ) :
-              wp_nav_menu($args);
-            else:
-          ?>
-              <li><a href="/" class="page-scroll">HOME</a></li>
-          <?php
-            endif;
-          ?>
+          <?php portfolio_menu() ?>
         </ul>
       </div>
     </nav>
@@ -55,27 +32,29 @@
 </header>
 
 <div id="main">
-  <div id="events">
+  <div id="portfolio">
     <div class="container">
-      <h1 class="title text-center">EVENTS</h1>
-        <ul>
+      <h1 class="title text-center"><?= $categoryName = single_cat_title() ?></h1>
+        <ul id="list-portfolio">
           <?php
             if( have_posts() ):
               while( have_posts() ): the_post();
-                $PostId = get_the_ID();
           ?>
-            <li class="event-item">
-              <a href="<?= the_permalink() ?>">
-                <div class="date"><?= the_title() ?></div>
-              </a>
-              <div class="date"><?= get_post_meta($PostId, 'Waktu', true) ?></div>
-              <div class="date"><?= get_post_meta($PostId, 'Lokasi', true) ?></div>
+            <li class="portfolio-item">
+                <a href="<?= the_permalink() ?>"><?= wp_trim_words(get_the_title(), 10, '') ?></a>
             </li>
           <?php
               endwhile;
             endif;
           ?>
         </ul>
+        <div class="btn-pagination">
+          <?php previous_posts_link()  ?>
+        </div>
+        <div class="btn-pagination">
+          <?php next_posts_link();  ?>
+        </div>
+
     </div>
   </div>
 </div>

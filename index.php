@@ -7,22 +7,11 @@
     <div id="cls-resv">
       <span onclick="closeNav()">&times;</span>
     </div>
-
     <div class="overlay-content">
       <ul>
         <li><a href="#home" class="page-scroll" onclick="closeNav()">HOME</a></li>
         <li><a href="#about" class="page-scroll" onclick="closeNav()">ABOUT</a></li>
-
-        <?php
-          $args = array(
-            'theme_location'  => 'main_menu',
-            'container'       => false,
-            'items_wrap' => '%3$s',
-          );
-          if ( has_nav_menu( 'main_menu' ) ) :
-            wp_nav_menu($args);
-          endif;
-        ?>
+        <?php main_menu() ?>
         <li><a href="#service" class="page-scroll" onclick="closeNav()">SERVICE</a></li>
         <li><a href="#our-team" class="page-scroll" onclick="closeNav()">OUR TEAM</a></li>
         <li><a href="#contact" class="page-scroll" onclick="closeNav()">CONTACT</a></li>
@@ -40,16 +29,7 @@
           <ul class="nav navbar-nav pull-right">
             <li><a href="#home" class="page-scroll" onclick="closeNav()">HOME</a></li>
             <li><a href="#about" class="page-scroll" onclick="closeNav()">ABOUT</a></li>
-              <?php
-                $args = array(
-                  'theme_location'  => 'main_menu',
-                  'container'       => false,
-                  'items_wrap' => '%3$s',
-                );
-                if ( has_nav_menu( 'main_menu' ) ) :
-                  wp_nav_menu($args);
-                endif;
-              ?>
+            <?php main_menu() ?>
             <li><a href="#service" class="page-scroll" onclick="closeNav()">SERVICES</a></li>
             <li><a href="#our-team" class="page-scroll" onclick="closeNav()">OUR TEAMS</a></li>
             <li><a href="#contact" class="page-scroll" onclick="closeNav()">CONTACT</a></li>
@@ -60,8 +40,8 @@
   </header>
 
   <div id="main">
-    <div class="container">
-      <section id="showslide">
+    <section id="showslide">
+      <div class="container">
         <div id="myCarousel" class="carousel slide" data-ride="carousel">
         <?php
           $query = new WP_Query( array( 'category_name' => 'Slider' ) );
@@ -117,7 +97,10 @@
             </div>
             <div class="col-md-6">
               <h1 class="title">About Us</h1>
-              <p><strong>Sembilan Organizer</strong> merupakan perusahaan kreatif di Kota Banhjarbaru - Kalimantan Selatan.</p>
+              <p><strong>Sembilan Organizer</strong> di dukung oleh High Quality Concept dan Proffesionally Skilled &amp; Highly Motivated Developing Team.</p>
+              <p>Kami berusaha untuk memberikan yang terbaik guna memenuhi komitmen kami dalah hal jasa pelayanan di bidang penyelenggaraan berbagai acara.</p>
+              <p>Kami akan memberikan solusi bagi apapun jenis kegiatan anda, baik internal maupun eksternal dengan kreatifitas dan kualitas terbaik!</p>
+              <a href="#" class="show">Download Profil Lengkap Kami</a>
             </div>
           </div>
         </div>
@@ -125,81 +108,23 @@
 
       <div id="service">
         <div class="container">
-          <div class="row">
-            <h1 class="title text-center">Service</h1>
-
-            <div class="col-md-3">
+          <h1 class="title text-center">Services</h1>
+          <div class="list-service">
+            <?php
+              $query = new WP_Query( array(
+                'category_name' => 'Services',
+                'posts_per_page' => 101012011,
+              ) );
+              if( $query->have_posts() ):
+                while( $query->have_posts() ): $query->the_post();
+            ?>
               <div class="service-item">
-                Creative Events
+                <a href="<?= the_permalink() ?>"><?= the_title() ?></a>
               </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                Creative Business Plan
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                Party Planner
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                Wedding Planner
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                Rent Equipment
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                Event Production
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                Interior Design
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                Exterior Design
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                Photography
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                Camera Cinematography
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                Advertising
-              </div>
-            </div>
-
-            <div class="col-md-3">
-              <div class="service-item">
-                And Others...
-              </div>
-            </div>
-
+            <?php
+                endwhile;
+              endif;
+            ?>
           </div>
         </div>
       </div>
@@ -209,11 +134,11 @@
           <div class="row">
             <div class="col-md-12">
               <h1 class="title text-center">Clients</h1>
-              <ul class="list-client">
+              <ul id="list-client">
                 <?php
                   $query = new WP_Query( array(
                     'category_name' => 'Clients',
-                    'posts_per_page' => 7,
+                    'posts_per_page' => 101012011,
                   ) );
                   if( $query->have_posts() ):
                     while( $query->have_posts() ): $query->the_post();
@@ -235,27 +160,31 @@
         <div class="container">
           <h1 class="title text-center">Our Team</h1>
           <div class="row">
-            <?php
-              $query = new WP_Query( array(
-                'category_name' => 'Teams'
-              ) );
-              if( $query->have_posts() ):
-                while( $query->have_posts() ): $query->the_post();
-                  if( has_post_thumbnail() ):
-                    $PostId = get_the_ID();
-            ?>
-            <div class="col-md-3 col-xs-6 text-center">
-              <div class="team">
-                <img src="<?= wp_get_attachment_url(get_post_thumbnail_id()) ?>" alt="<?= $PostId ?>" class="img-circle img-team"/>
-                <span class="name"><?= get_post_meta($PostId, 'Nama', true) ?></span>
-                <span class="job"><?= get_post_meta($PostId, 'Jabatan', true) ?></span>
-              </div>
-            </div>
-            <?php
-                  endif;
-                endwhile;
-              endif;
-            ?>
+            <ul id="list-team">
+              <?php
+                $query = new WP_Query( array(
+                  'category_name' => 'Teams',
+                  'posts_per_page' => 101012011,
+                ) );
+                if( $query->have_posts() ):
+                  while( $query->have_posts() ): $query->the_post();
+                    if( has_post_thumbnail() ):
+                      $PostId  = get_the_ID();
+                      $ImgSrc  = wp_get_attachment_url(get_post_thumbnail_id());
+                      $Nama    = get_post_meta($PostId, 'Nama', true);
+                      $Jabatan = get_post_meta($PostId, 'Jabatan', true);
+              ?>
+              <li class="team">
+  							<img src="<?= $ImgSrc ?>" alt="<?= $Nama ?>" class="img-circle img-team"/>
+  							<span class="name"><?= $Nama ?></span>
+  							<span class="job"><?= $Jabatan ?></span>
+  						</li>
+              <?php
+                    endif;
+                  endwhile;
+                endif;
+              ?>
+            </ul>
           </div>
         </div>
       </div>
