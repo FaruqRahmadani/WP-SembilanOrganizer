@@ -5,10 +5,10 @@
       <h1 class="title text-center">Contact</h1>
       <div class="col-md-6 info">
         <h3>OFFICE :</h3>
-				<p>Jl. Rambai Timur No.47 RT.03/03 Kel. Guntug Paikat Kec. Banjarbaru Selatan Kota Banjarbaru - Kalimantan Selatan</p><br>
+				<p>Jl. Rambai Timur No.47 RT.03/03 Kel. Guntung Paikat Kec. Banjarbaru Selatan Kota Banjarbaru - Kalimantan Selatan</p><br>
 
 				<h3>TELEPHONE :</h3>
-				<p>0511-5910-183 (Office)</p>
+				<p>0511-5917-242 (Office)</p>
 				<br>
 
 				<h3>MOBILE :</h3>
