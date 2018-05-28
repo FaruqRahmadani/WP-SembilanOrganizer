@@ -100,7 +100,7 @@
               <p><strong>Sembilan Organizer</strong> di dukung oleh High Quality Concept dan Proffesionally Skilled &amp; Highly Motivated Developing Team.</p>
               <p>Kami berusaha untuk memberikan yang terbaik guna memenuhi komitmen kami dalah hal jasa pelayanan di bidang penyelenggaraan berbagai acara.</p>
               <p>Kami akan memberikan solusi bagi apapun jenis kegiatan anda, baik internal maupun eksternal dengan kreatifitas dan kualitas terbaik!</p>
-              <a href="#" class="show">Download Profil Lengkap Kami</a>
+              <a target="_blank" href="http://assets.sembilanorganizer.co.id/CompanyProfileSembilanOrganizer.pdf" class="show">Download Profil Lengkap Kami</a>
             </div>
           </div>
         </div>
